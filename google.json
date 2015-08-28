@@ -1,0 +1,9 @@
+{
+    "Keys": ["google"],
+    "Provider": "google",
+    "Version": 300,
+    "Experimental": false,
+    "Features": [
+        "OnlineMappingFeature"
+    ]
+}

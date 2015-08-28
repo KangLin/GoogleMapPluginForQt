@@ -1,0 +1,90 @@
+/****************************************************************************
+**
+** Copyright (C) 2014 Canonical Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:FDL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: http://www.gnu.org/copyleft/fdl.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+\page location-plugin-google.html
+\title Qt Location Google Plugin
+\ingroup QtLocation-plugins
+
+\brief 使用 Google 位置服务
+
+\section1 概述
+
+这个插件用于从google地图服务器上取得地图数据。
+数据由 Google 提供。
+作者：康林<kl222@126.com>
+
+Google 地图插件可以用关键字 "google" 来加载。
+
+\section1 参数
+
+\section2 google 服务器主机与区域可选参数
+下表是传给插件的服务器主机与区域可选参数。
+
+\table
+\header
+    \li 参数
+    \li 描述
+\row
+    \li google.mapping.host
+    \li Google服务器主机地址。它默认是 www.google.com 。
+        由于中国政府的原因，在中国大陆不能访问 www.google.com ，
+	所以中国大陆要设置 www.google.cn 
+\row
+    \li google.mapping.locale
+    \li 区域。中国地图用的是GCJ-02。所以中国大陆可以设置为 "cn" 。
+\endtable
+
+\section2 例子
+\code
+Plugin {
+    name: "google"
+    PluginParameter { name: "google.mapping.host"; value: "www.google.cn" }
+    PluginParameter { name: "google.mapping.locale"; value: "cn" }
+}
+\endcode
+
+\section2 缓存参数
+下表是插件缓存可选参数。
+\table
+\header
+    \li 参数
+    \li 描述
+\row 
+    \li google.mapping.cache.directory
+    \li 缓存目录
+\row
+    \li google.mapping.cache.disk.size
+    \li 磁盘缓存大小
+\row 
+    \li google.mapping.cache.memory.size
+    \li 内在缓存大小
+\row 
+    \li google.mapping.cache.texture.size
+    \li 纹理缓存大小
+\endtable
+*/

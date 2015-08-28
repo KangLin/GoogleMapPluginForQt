@@ -1,0 +1,88 @@
+/****************************************************************************
+**
+** Copyright (C) 2014 Canonical Ltd.
+** Contact: http://www.qt.io/licensing/
+**
+** This file is part of the documentation of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:FDL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and The Qt Company. For licensing terms
+** and conditions see http://www.qt.io/terms-conditions. For further
+** information use the contact form at http://www.qt.io/contact-us.
+**
+** GNU Free Documentation License Usage
+** Alternatively, this file may be used under the terms of the GNU Free
+** Documentation License version 1.3 as published by the Free Software
+** Foundation and appearing in the file included in the packaging of
+** this file. Please review the following information to ensure
+** the GNU Free Documentation License version 1.3 requirements
+** will be met: http://www.gnu.org/copyleft/fdl.html.
+** $QT_END_LICENSE$
+**
+****************************************************************************/
+
+/*!
+\page location-plugin-google.html
+\title Qt Location Google Plugin
+\ingroup QtLocation-plugins
+
+\brief Uses Google for location services.
+
+\section1 Overview
+
+This plugin is used to access google map service.
+The data is provided by Google.
+The Author is KangLin<kl222@126.com>
+
+The Google geo services plugin can be loaded by using the plugin key "google".
+
+\section1 Parameters
+
+\section2 Host and locale parameters
+The following table lists optional parameters that can be passed to the Google plugin.
+\table
+\header
+    \li Parameter
+    \li Description
+\row
+    \li google.mapping.host
+    \li google host provided by Google. The default is www.google.com.
+        An example is www.google.cn in chain.
+\row
+    \li google.mapping.locale
+    \li An example is "cn" , is china type map (GCJ-02).
+\endtable
+
+\section2 Parameter Usage Example
+\code
+Plugin {
+    name: "google"
+    PluginParameter { name: "google.mapping.host"; value: "www.google.cn" }
+    PluginParameter { name: "google.mapping.locale"; value: "cn" }
+}
+\endcode
+
+\section2 Cache parameters
+The following table lists optional parameters that can be passed to the Google plugin.
+\table
+\header
+    \li Parameter
+    \li Description
+\row 
+    \li google.mapping.cache.directory
+    \li The cache directory
+\row
+    \li google.mapping.cache.disk.size
+    \li The disk cache size
+\row 
+    \li google.mapping.cache.memory.size
+    \li The memory size
+\row 
+    \li google.mapping.cache.texture.size
+    \li The texture cache size
+\endtable
+*/
