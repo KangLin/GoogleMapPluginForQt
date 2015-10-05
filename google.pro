@@ -13,7 +13,7 @@ PLUGIN_TYPE = geoservices
 PLUGIN_CLASS_NAME = QGeoServiceProviderFactoryGoogle
 load(qt_plugin)
 
-DESTDIR = $$[QT_INSTALL_PLUGINS]/geoservices
+#DESTDIR = $$[QT_INSTALL_PLUGINS]/geoservices
 
 SOURCES += \
     qgeotiledmappingmanagerenginegoogle.cpp \
@@ -33,7 +33,4 @@ HEADERS += \
 
 DISTFILES += google.json
 
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+
